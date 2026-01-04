@@ -96,11 +96,11 @@ class HomePage extends HTMLElement {
           <h2 class="!text-4xl !my-0 uppercase tracking-[5px] text-green-600 animate-slide-in-up text-shadow-glow-green">Connect with me</h2>
           <div class="flex flex-row w-full max-w-xl justify-between mt-8">
             <div class="animate-slide-in-left">
-              <h3 class="text-white text-lg mb-2 uppercase">Email</h3>
+              <h3 class="text-white text-lg mb-2 uppercase text-shadow-glow-white">Email</h3>
               <a href="mailto:mj.balutan@gmail.com" class="border-b !text-white">mj.balutan@gmail.com</a>
             </div>
             <div class="animate-slide-in-left text-right">
-              <h3 class="text-white text-lg mb-2 uppercase">LinkedIn</h3>
+              <h3 class="text-white text-lg mb-2 uppercase text-shadow-glow-white">LinkedIn</h3>
               <a href="https://www.linkedin.com/in/mjbalutan/" class="border-b !text-white">@mjbalutan</a>
             </div>
           </div>
@@ -129,6 +129,13 @@ class HomePage extends HTMLElement {
         if (c.startsWith('text-')) label.classList.remove(c);
       });
       label.classList.add(`text-${color}`);
+      if (color === 'white') {
+        label.classList.add('text-shadow-glow-white');
+        label.classList.remove('text-shadow-glow-green');
+      } else {
+        label.classList.add('text-shadow-glow-green');
+        label.classList.remove('text-shadow-glow-white');
+      }
 
       // Update circle border (keep border-2)
       Array.from(circle.classList).forEach(c => {
