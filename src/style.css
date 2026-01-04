@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --animate-typing: typing 2s steps(20) infinite alternate, blink 0.7s infinite;
+  --animate-typing-once: typing 2s steps(20) forwards, blink 0.7s infinite;
+  --animate-slide-in-left: slide-in-left 1s ease-in-out;
+  --animate-slide-in-right: slide-in-right 1s ease-in-out;
+  --animate-slide-in-up: slide-in-up 1s ease-in-out;
+  --animate-scroll-dot: scroll-dot 1.2s infinite;
+  --text-shadow-glow-white: 0 0 5px #fff;
+  --text-shadow-glow-green: 0 0 5px #59CF77;
+  --color-glow-green: #59CF77;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes scroll-dot {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(12px); opacity: 0; }
+  }
+}
+
+body {
+  font-family: 'DotGothic16', monospace;
+}
